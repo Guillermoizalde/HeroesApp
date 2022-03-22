@@ -146,4 +146,41 @@ export const SearchScreen = () => {
       </>
     )
   }
+  import { useForm } from "../../hooks/useForm"
+  import { useForm } from '../../hooks/useForm'
+  import { getHeroesByName } from '../../selectors/getHeroesByName';
+  import { HeroCard } from '../hero/HeroCard';
+
+
+  export const SearchScreen = () => {
+  }
+
+   })
+
+    const { searchText }  = formValues;
+    const heroesFileted = getHeroesByName('ALGO POR AQUI')
+
+    const handleSearch = (e) => {
+      e.preventDefautl();
+
+
+            </div>
+
+            <div className='col-7'>
+              <h4>Resultados</h4>
+              <hr />
+
+              {
+                heroesFileted.map(hero =>(
+                  <HeroCard
+                     key={ hero.id }
+                     {...hero }
+                  />
+                ))
+              }
+
+            </div>
+
+          </div>
+      </>
   
